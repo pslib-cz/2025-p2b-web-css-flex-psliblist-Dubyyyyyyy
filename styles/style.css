@@ -7,10 +7,10 @@ body > .container {
  
 /* obrázky jsou responzivní */
 .img-responsive {
-    object-fit: cover;
     display: inline-block;
-    width: 100%;
+    object-fit: cover;
     height: 100%;
+    width: 100%;
     margin: 0;
 }
  
@@ -24,11 +24,11 @@ body > .container {
 .news-item__date {
     text-align: center;
     flex-direction: column;
+    max-width: 116px;
+    max-height: 116px;
     flex-grow: 1;
     flex-shrink: 0;
     order: 1;
-    max-width: 116px;
-    max-height: 116px;
 }
  
 .news-item__date-part--month {
@@ -36,23 +36,23 @@ body > .container {
 }
  
 .news-item__date-part--day {
-    flex-grow: 1;
     border-bottom: 6px solid var(--category-accent);
+    flex-grow: 1;
 }
  
 /* mezi datumem a boxem je modrá tečka (8px) s bílým okrajem (3px) */
 .news-item::before {
     content: "";
     display: block;
-    border: 3px solid var(--color-bg-pink);
-    border-radius: 50%;
     align-self: center;
-    order: 2;
-    margin: 0 -3px;
-    z-index: 1;
+    border: 3px solid var(--color-bg-pink);
     background-color: var(--category-accent);
     height: 8px;
     width: 8px;
+    border-radius: 50%;
+    order: 2;
+    margin: 0 -3px;
+    z-index: 1;
     flex-shrink: 0;
 }
  
